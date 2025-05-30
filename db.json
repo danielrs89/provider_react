@@ -1,0 +1,25 @@
+{
+  "provider": [
+    { "id": 1, "name": "Carnes del Norte", "cif":"C12348765", "email": "carnes@norte.com", "phone": "600111222", "category": "carnes" },
+    { "id": 2, "name": "Pescados Astur", "cif":"C12348765", "email": "astur@pescado.com", "phone": "600222333", "category": "pescados" },
+    { "id": 3, "name": "Vinos Selectos", "cif":"C12348765", "email": "contacto@vinosselectos.com", "phone": "600333444", "category": "vinos" },
+    { "id": 4, "name": "Refrescos Cola", "cif":"C12348765", "email": "ventas@refrescoscola.com", "phone": "600444555", "category": "refrescos" },
+    { "id": 5, "name": "Dulces La Tarta", "cif":"C12348765", "email": "dulces@latarta.com", "phone": "600555666", "category": "postres" }
+  ],
+
+  "product": [
+    { "id": 1, "name": "Entrecot de vaca", "description": "Corte premium de carne roja", "unit": 2, "price": 18.5, "providerId": 1 },
+    { "id": 2, "name": "Bonito del norte", "description": "Pescado blanco del Cantábrico", "unit": 7, "price": 14.0, "providerId": 2 },
+    { "id": 3, "name": "Vino Rioja Reserva", "description": "Botella de 750ml", "unit": 4, "price": 9.5, "providerId": 3 },
+    { "id": 4, "name": "Cola cola", "description": "Refresco Light sin azúcar 2L ", "unit": 20, "price": 1.2, "providerId": 4 },
+    { "id": 5, "name": "Tarta de queso", "description": "Postre casero artesanal", "unit": 14, "price": 3.0, "providerId": 5 }
+  ],
+
+  "sales": [
+    { "id": 1, "providerId": 1, "productId": 1, "unit": 5, "price": 92.5, "date": "2025-01-01" },
+    { "id": 2, "providerId": 2, "productId": 2, "unit": 10, "price": 140.0, "date": "2025-02-02" },
+    { "id": 3, "providerId": 3, "productId": 3, "unit": 12, "price": 114.0, "date": "2025-03-03" },
+    { "id": 4, "providerId": 4, "productId": 4, "unit": 20, "price": 24.0, "date": "2025-04-04" },
+    { "id": 5, "providerId": 5, "productId": 5, "unit": 15, "price": 45.0, "date": "2025-05-05" }
+  ]
+}

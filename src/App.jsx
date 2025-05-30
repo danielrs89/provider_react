@@ -19,7 +19,7 @@ function App() {
           <Route path="/ventas" element={<SalesPage />} />
           <Route path="/informes" element={<ReportsPage />} />
 
-          <Route path="*" element={ErrorPage} />
+          <Route path="*" element={<ErrorPage/>} />
         </Routes>
       </Suspense>
     </>

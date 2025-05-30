@@ -1,9 +1,18 @@
-import React from 'react'
+import { Link } from "react-router-dom";
+import error from "../assets/img/error.png";
 
-const ErrorPage = () => {
+// Componente para manejar páginas de error o rutas no encontradas
+function ErrorPage() {
   return (
-    <div>ErrorPage</div>
-  )
+    <>
+      <h1>404 - Página no encontrada</h1>
+      <br />
+      <Link to={"/"}>
+        <img src={error} alt="error" />
+        <h2>Ir al inicio</h2>
+      </Link>
+    </>
+  );
 }
 
-export default ErrorPage
+export default ErrorPage;
