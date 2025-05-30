@@ -1,13 +1,12 @@
 import "./App.css";
 import { Suspense } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import SalesPage from "./pages/SalesPage";
 import ReportsPage from "./pages/ReportsPage";
 import ErrorPage from "./pages/ErrorPage";
 import ProvidersPage from "./pages/ProvidersPage";
-import loadLogo from "./assets/img/load.png";
 function App() {
   return (
     <>

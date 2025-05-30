@@ -1,10 +1,11 @@
-import React from "react";
 import loadLogo from "../assets/img/load.png";
 import { Link } from "react-router-dom";
 
 const ProductsPage = () => {
+  cons
   return (
     <>
+      {/* cabecera */}
       <div className="d-flex align-items-center gap-4">
         <Link to={"/"}>
           <img src={loadLogo} alt="loadLogo" />
