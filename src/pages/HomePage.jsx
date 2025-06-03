@@ -1,5 +1,5 @@
 import NavComponent from "../components/NavComponent";
-import loadLogo from "../assets/img/load.png";
+import loadLogo from "../assets/img/icons/load.png";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

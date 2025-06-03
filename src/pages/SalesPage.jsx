@@ -1,5 +1,5 @@
 import React from "react";
-import loadLogo from "../assets/img/load.png";
+import loadLogo from "../assets/img/icons/load.png";
 import { Link } from "react-router-dom";
 
 const SalesPage = () => {

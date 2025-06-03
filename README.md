@@ -1,7 +1,7 @@
 <!-- npx json-server db.json --port 3001 -->
 <!-- npm run dev -->
 <p align="center">
-  <img src="./src/assets/img/load.png" alt="App Logo" height="100" />
+  <img src="./src/assets/img/icons/load.png" alt="App Logo" height="100" />
 </p>
 
 

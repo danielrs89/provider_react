@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import edit from "../assets/img/edit.png";
-import deleteIMG from "../assets/img/delete.png";
-import mail from "../assets/img/mail.png";
-import wasap from "../assets/img/wasap.png";
+import edit from "../assets/img/icons/edit.png";
+import deleteIMG from "../assets/img/icons/delete.png";
+import mail from "../assets/img/icons/mail.png";
+import wasap from "../assets/img/icons/wasap.png";
 import { ProviderContext } from "../contexts/provider.context";
 
 function ProviderCard(Props) {

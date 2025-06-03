@@ -1,13 +1,13 @@
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { ProviderContext } from "../contexts/provider.context";
+import { ProviderContext } from "../../contexts/provider.context";
 
-import loadLogo from "../assets/img/load.png";
-import edit from "../assets/img/edit.png";
-import deleteIMG from "../assets/img/delete.png";
-import mail from "../assets/img/mail.png";
-import wasap from "../assets/img/wasap.png";
+import loadLogo from "../../assets/img/icons/load.png";
+import edit from "../../assets/img/icons/edit.png";
+import deleteIMG from "../../assets/img/icons/delete.png";
+import mail from "../../assets/img/icons/mail.png";
+import wasap from "../../assets/img/icons/wasap.png";
 
 const ProvidersPage = () => {
   const { provider, error, getProviders, deleteProvider } =
@@ -35,7 +35,6 @@ const ProvidersPage = () => {
       <article key={index}>
         <div className="card mb-3">
           <div className="card-header d-flex justify-content-between align-items-center">
-            {/* <h5 className="m-0">{provider.name_provider}</h5> */}
             <h5 className="m-0">{provider?.name_provider}</h5>
 
             {/* // Botones de acción    */}
@@ -84,7 +83,7 @@ const ProvidersPage = () => {
               </a>
             </p>
             <p className="card-text">{provider?.category_provider}</p>
-            <Link to={"/productos"} className="btn btn-primary">
+            <Link to={`/productos/${provider.id_provider}`} className="btn btn-primary">
               Productos
             </Link>
           </div>

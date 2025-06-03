@@ -1,12 +1,9 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { CategoryContext } from "../contexts/category.context";
-import { ProviderContext } from "../contexts/provider.context";
-import loadLogo from "../assets/img/load.png";
-import edit from "../assets/img/edit.png";
-import deleteIMG from "../assets/img/delete.png";
-import mail from "../assets/img/mail.png";
-import wasap from "../assets/img/wasap.png";
+import { CategoryContext } from "../../contexts/category.context";
+import { ProviderContext } from "../../contexts/provider.context";
+import loadLogo from "../../assets/img/icons/load.png";
+
 
 const ProvidersUpdatePage = () => {
 

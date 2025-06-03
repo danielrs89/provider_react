@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import error from "../assets/img/error.png";
+import error from "../assets/img/icons/error.png";
 
 // Componente para manejar páginas de error o rutas no encontradas
 function ErrorPage() {

@@ -16,7 +16,7 @@ function ProviderProviderWrapper(props) {
       setError(false);
     } catch (e) {
       setError(true);
-      console.log("Error getProvider() =>", e);
+      console.log("Error getProviders() =>", e);
     }
   };
 

@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import loadLogo from "../assets/img/load.png";
-import { ProviderContext } from "../contexts/provider.context";
-import { CategoryContext } from "../contexts/category.context";
+import loadLogo from "../../assets/img/icons/load.png";
+import { ProviderContext } from "../../contexts/provider.context";
+import { CategoryContext } from "../../contexts/category.context";
 
 const ProviderCreatePage = () => {
   const navigate = useNavigate();

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import provider from "../assets/img/provider.png";
-import product from "../assets/img/product.png";
-import sales from "../assets/img/sales.png";
-import report from "../assets/img/report.png";
+import provider from "../assets/img/icons/provider.png";
+import product from "../assets/img/icons/product.png";
+import sales from "../assets/img/icons/sales.png";
+import report from "../assets/img/icons/report.png";
 const NavComponent = () => {
   return (
     <>
