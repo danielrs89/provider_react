@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const ProviderContext = createContext();
 
 function ProviderProviderWrapper(props) {
-  const API_URL = "http://localhost:3001/provider";
+  const API_URL = "http://localhost:3000/provider";
   const [provider, setProviders] = useState([]);
   const [error, setError] = useState(false);
 
@@ -20,62 +20,75 @@ function ProviderProviderWrapper(props) {
     }
   };
 
-  const addUser = async () => {
-    const newUser = {
-      name: "Nuevo Usuario",
-      email: "nuevo@correo.com",
-    };
-
+  const addProvider = async (newProvider) => {
     try {
-      const res = await fetch(API_URL, {
+      const res = await fetch(`${API_URL}/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newUser),
+        body: JSON.stringify(newProvider),
       });
 
       const data = await res.json();
-      setUsers((prev) => [...prev, data]);
+      setProviders((prev) => [...prev, data.provider]);
     } catch (err) {
-      console.error("Error al añadir usuario:", err.message);
+      console.error("Error al añadir proveedor:", err.message);
     }
   };
 
-  const updateUser = async (id) => {
+  const updateProvider = async (formData, id) => {
     try {
-      const res = await fetch(`${API_URL}/${id}`, {
+      const res = await fetch(`${API_URL}/update/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name: "Nombre Actualizado" }),
+        body: JSON.stringify({
+          name_provider: formData.name,
+          cif_provider: formData.cif,
+          email_provider: formData.email,
+          phone_provider: formData.phone,
+          category_provider: formData.category,
+        }),
       });
 
       const updated = await res.json();
-      setUsers((prev) =>
-        prev.map((user) => (user.id === id ? { ...user, ...updated } : user))
+      setProviders((prev) =>
+        prev.map((provider) =>
+          provider.id_provider === id ? { ...provider, ...updated } : provider
+        )
       );
     } catch (err) {
-      console.error("Error al actualizar usuario:", err.message);
+      console.error("Error al actualizar proveedor:", err.message);
     }
   };
 
-  const deleteUser = async (id) => {
+  const deleteProvider = async (id) => {
     try {
-      await fetch(`${API_URL}/${id}`, {
+      const response = await fetch(`${API_URL}/delete/${Number(id)}`, {
         method: "DELETE",
       });
-
-      setUsers((prev) => prev.filter((user) => user.id !== id));
+      if (!response.ok) {
+        throw new Error(`Error al eliminar: ${response.status}`);
+      }
+      setProviders((prev) => prev.filter((provider) => provider.id !== id));
     } catch (err) {
-      console.error("Error al eliminar usuario:", err.message);
+      console.error("Error al eliminar el proveedor:", err.message);
     }
   };
 
   return (
     <ProviderContext.Provider
-      value={{ provider, setProviders, error, getProviders }}
+      value={{
+        provider,
+        setProviders,
+        error,
+        getProviders,
+        updateProvider,
+        addProvider,
+        deleteProvider,
+      }}
     >
       {props.children}
     </ProviderContext.Provider>
